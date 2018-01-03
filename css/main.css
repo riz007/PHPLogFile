@@ -1,0 +1,119 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  /*border-top: 1px solid #e5e5e5;*/
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* list */
+.rounded-list ol 
+{
+counter-reset:li; /* Initiate a counter */
+margin-left:0; /* Remove the default left margin */
+padding-left:0; /* Remove the default left padding */
+}
+
+/* item  */
+.rounded-list ol > li
+{
+position:relative; /* Create a positioning context */
+list-style:none; /* Disable the normal item numbering */
+background:#f6f6f6; /* Item background color */
+margin:0; /* Give each list item a left margin to make room for the numbers */
+padding-left: 15px; /* Add some spacing around the content */
+padding-bottom:0px;
+padding-top:0px;
+}
+
+/* number  */
+.rounded-list ol > li p:before
+{
+content: counter(li); 
+counter-increment: li; 
+position: absolute; 
+left: -1.3em;
+top: 50%;
+
+/* number background */
+background: #87ceeb; 
+height: 2em;
+width: 2em;
+margin-top: -1em;
+line-height: 1.5em;
+border: .3em solid #fff;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+}
